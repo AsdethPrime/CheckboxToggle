@@ -1,0 +1,43 @@
+<head>
+  <title>Checkboxs</title>
+</head>
+<body>
+  <input type="checkbox" id="lun" onchange="lunChanged()" />
+  <input type="checkbox" id="mar" onchange="marChanged()"/>
+  <input type="checkbox" id="sam" onchange="samChanged()" />
+  <input type="checkbox" id="mer" onchange="merChanged()"/>
+  <script>
+      function lunChanged(){
+          if(document.getElementById('lun').checked) {
+              document.getElementById('mar').checked = false 
+              document.getElementById('sam').checked = false 
+              document.getElementById('mer').checked = false 
+          }
+      }
+      
+      function marChanged(){
+          if(document.getElementById('mar').checked) {
+              document.getElementById('lun').checked = false 
+              document.getElementById('sam').checked = false 
+              document.getElementById('mer').checked = false 
+          }
+      }
+
+      function samChanged(){
+          if(document.getElementById('sam').checked) {
+              document.getElementById('lun').checked = false 
+              document.getElementById('mar').checked = false 
+              document.getElementById('mer').checked = false 
+          }
+      }
+
+      function merChanged(){
+        if(document.getElementById('mer').checked) {
+              document.getElementById('lun').checked = false 
+              document.getElementById('sam').checked = false 
+              document.getElementById('mar').checked = false 
+          }          
+      }
+  
+  </script>
+</body>
